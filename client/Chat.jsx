@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatInput from './chatInput';
-import ChatLog from './chatLog';
-import UserList from './userList';
+import ChatInput from './ChatInput';
+import ChatLog from './ChatLog';
+import UserList from './UserList';
 
 export default class Chat extends React.Component {
   render() {
