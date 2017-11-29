@@ -1,0 +1,2 @@
+# lively
+Meteor chat app
