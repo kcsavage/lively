@@ -4,10 +4,11 @@ import { Mongo } from 'meteor/mongo';
 export const ChatMessages = new Mongo.Collection('chatMessages');
 
 Meteor.methods({
-  chatMessage(text){
+  chatMessage(text) {
     const date = new Date();
     const timeStamp = Date.now();
-    const userId = this.UserId || 'unknown';
-    ChatMessages.insert({text, date, timeStamp, userId});
+    const user = Meteor.users.findOne(Meteor.userId()) || { _id: 'unknown', username: 'unknown' };
+    const { username: userName, _id: userId } = user;
+    ChatMessages.insert({ text, date, timeStamp, userId, userName })
   }
 });
