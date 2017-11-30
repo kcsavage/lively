@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const chatBoxStyle = { width: '89%', height: '20px', fontSize: '15px' };
+const chatBoxStyle = { width: 'calc(100% - 15px)', height: '30px', fontSize: '15px', boxSizing: 'border-box', borderRadius: '5px' };
+const chatContainerStyle = { marginBottom: '15px',  bottom: 0 };
+
 let timerHandle;
 
 export default class ChatInput extends React.Component {
@@ -9,6 +11,8 @@ export default class ChatInput extends React.Component {
     // grab chat text throw it over to server and clear chat box
     ev.preventDefault();
     const text = ReactDOM.findDOMNode(this.refs.chatBox).value.trim();
+    if (text === '')
+      return;
     Meteor.call('chatMessage', text);
     ReactDOM.findDOMNode(this.refs.chatBox).value = '';
   }
@@ -28,14 +32,16 @@ export default class ChatInput extends React.Component {
 
   render() {
     return (
-      <div>
-        <form className="chatBox" onSubmit={ this.handleSubmit.bind(this) }>
+      <div style={ chatContainerStyle }>
+        <form onSubmit={ this.handleSubmit.bind(this) }>
+          <span style={ { display: 'block', overflow: 'hidden' } }>
           <input type="text"
                  ref="chatBox"
                  placeholder="chat here"
                  style={ chatBoxStyle }
                  onKeyPress={ this.handleTyping.bind(this) }
           />
+          </span>
         </form>
       </div>
     );

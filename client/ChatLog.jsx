@@ -1,6 +1,6 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import Message from './ChatMessage';
+import ChatMessage from './ChatMessage';
 import { ChatMessages } from '../imports/api';
 
 const logStyle = { 'overflowY': 'scroll', height: '100%'};
@@ -13,7 +13,7 @@ class ChatLog extends React.Component {
   renderMessages() {
     const messages = this.props.messages;
     return messages.map(message => {
-      return <Message key={message._id} message={message} />
+      return <ChatMessage key={message._id} message={message} />
     })
   }
 

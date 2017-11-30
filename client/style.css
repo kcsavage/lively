@@ -1,41 +1,64 @@
+body {
+  font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+}
+
 ul {
   list-style: none;
   padding: 0;
 }
 
 li.user {
-  height: 20px;
+  height: 30px;
   padding: 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #21507f;
+  color: white;
+  overflow: hidden;
+}
+
+img.emojione {
+  margin: 0px !important;
+  display: inline !important;
+
+  height: auto;
+  width: 50px;
+}
+
+span.emoji {
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 2;
 }
 
 .message {
   margin-left: 0px;
 }
 
-h3.message-header {
-  line-height: 5px;
+.message-header {
+  font-weight: bold;
+  font-size: 15px;
+  color: #223a51;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .message-body {
   overflow-wrap: break-word;
+  padding-bottom: 5px
 }
 
 .userList {
   float: left;
-  width: 100px;
+  width: 150px;
 }
 
-.chatContainer{
-  margin-left: 105px;
+.chatContainer {
+  margin-left: 160px;
 }
 
 .chatLog {
-  height: 90vh;
-}
-
-.chatInput {
-  width: 100%;
-  margin-bottom: 15px;
-  position: fixed;
-  bottom: 0;
+  height: calc(100vh - 50px);
 }
