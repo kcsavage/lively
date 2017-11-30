@@ -4,6 +4,11 @@ import ChatLog from './ChatLog';
 import UserList from './UserList';
 import AccountsUIWrapper from './AccountUI';
 
+
+const userListStyle = { float: 'left', width: '150px' };
+const chatContainerStyle = { marginLeft: '160px' };
+const chatLogStyle = { height: 'calc(100vh - 50px)' };
+
 // This is the main component of the chat app
 export default class Chat extends React.Component {
   render() {
@@ -12,14 +17,14 @@ export default class Chat extends React.Component {
         <div style={ { position: 'fixed' } }>
           <AccountsUIWrapper/>
         </div>
-        <div className="userList">
+        <div style={userListStyle} className='userList'>
           <UserList/>
         </div>
-        <div className="chatContainer">
-          <div className="chatLog">
+        <div style={chatContainerStyle} className='chatContainer'>
+          <div style={chatLogStyle} className='chatLog'>
             <ChatLog/>
           </div>
-          <div className="chatInput">
+          <div className='chatInput'>
             <ChatInput/>
           </div>
         </div>

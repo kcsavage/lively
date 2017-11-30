@@ -50,16 +50,3 @@ span.emoji {
   overflow-wrap: break-word;
   padding-bottom: 5px
 }
-
-.userList {
-  float: left;
-  width: 150px;
-}
-
-.chatContainer {
-  margin-left: 160px;
-}
-
-.chatLog {
-  height: calc(100vh - 50px);
-}
