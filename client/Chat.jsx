@@ -4,6 +4,7 @@ import ChatLog from './ChatLog';
 import UserList from './UserList';
 import AccountsUIWrapper from './AccountUI';
 
+// This is the main component of the chat app
 export default class Chat extends React.Component {
   render() {
     return (

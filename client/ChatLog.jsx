@@ -6,6 +6,7 @@ import { ChatMessages } from '../imports/api';
 const logStyle = { 'overflowY': 'scroll', height: '100%'};
 
 class ChatLog extends React.Component {
+  // When we load up or a new message comes in, scroll the view to the newest message
   scrollToCaret = (behavior = 'smooth') => {
     this.placeHolder.scrollIntoView({ behavior });
   };

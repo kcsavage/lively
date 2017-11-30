@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Template } from 'meteor/templating';
 import { Blaze } from 'meteor/blaze';
 
+// This was mostly taken from Meteor's guide on wrapping blaze components in react
 export default class AccountsUI extends Component {
   componentDidMount() {
     // Use Meteor Blaze to render login buttons

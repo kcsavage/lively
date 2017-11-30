@@ -19,6 +19,7 @@ li.user {
   overflow: hidden;
 }
 
+/*there is some special logic required dealing with emojis inline*/
 img.emojione {
   margin: 0px !important;
   display: inline !important;
