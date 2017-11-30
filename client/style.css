@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.message {
+  margin-left: 0px;
+}
+
+.userList {
+  float: left;
+  width: 100px;
+}
+
+.chatContainer{
+  margin-left: 105px;
+}
+
+.chatLog {
+  height: 90vh;
+}
+
+.chatInput {
+  width: 100%;
+  margin-bottom: 15px;
+  position: fixed;
+  bottom: 0;
+}

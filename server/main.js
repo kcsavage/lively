@@ -8,3 +8,7 @@ Meteor.startup(() => {
 Meteor.publish('chatMessages', function chatPublication() {
   return ChatMessages.find({}, { $sort: { timeStamp: 1 } });
 });
+
+Meteor.publish('users', function userPublication() {
+  return Meteor.users.find({}, {$fields: {username: 1}});
+});

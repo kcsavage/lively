@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const chatBoxStyle = { width: '80%' };
+
 export default class ChatInput extends React.Component {
   handleSubmit(ev) {
     // grab chat text throw it over to server and clear chat box
@@ -13,13 +15,8 @@ export default class ChatInput extends React.Component {
   render() {
     return (
       <div>
-        <h2>user input goes here</h2>
         <form className="chatBox" onSubmit={ this.handleSubmit.bind(this) }>
-          <input
-            type="text"
-            ref="chatBox"
-            placeholder="chat here"
-          />
+          <input type="text" ref="chatBox" placeholder="chat here" style={ chatBoxStyle }/>
         </form>
       </div>
     );
