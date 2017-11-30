@@ -10,5 +10,5 @@ Meteor.publish('chatMessages', function chatPublication() {
 });
 
 Meteor.publish('users', function userPublication() {
-  return Meteor.users.find({}, {$fields: {username: 1}});
+  return Meteor.users.find({}, { $fields: { username: 1, typingNow: 1 } });
 });

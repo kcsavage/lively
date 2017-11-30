@@ -10,5 +10,9 @@ Meteor.methods({
     const user = Meteor.users.findOne(Meteor.userId()) || { _id: 'unknown', username: 'unknown' };
     const { username: userName, _id: userId } = user;
     ChatMessages.insert({ text, date, timeStamp, userId, userName })
+  },
+
+  typingNow(userId, typingNow = false) {
+    Meteor.users.update(userId, { $set: { typingNow } });
   }
 });

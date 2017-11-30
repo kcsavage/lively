@@ -1,6 +1,6 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import Message from './Message';
+import Message from './ChatMessage';
 import { ChatMessages } from '../imports/api';
 
 const logStyle = { 'overflowY': 'scroll', height: '100%'};
@@ -31,11 +31,11 @@ class ChatLog extends React.Component {
   }
 
   componentDidMount() {
-    this.scrollToCaret('instant');
+    this.scrollToCaret();
   }
 
   componentDidUpdate() {
-    this.scrollToCaret('smooth');
+    this.scrollToCaret();
   }
 }
 
